@@ -11,14 +11,9 @@ import matplotlib.pyplot as plt
 import time
 from pymongo import MongoClient
 import datetime
-import dns
-import sys
-import os
 import websocket
-from pprint import pprint
 from queue import Queue
 from threading import Thread
-import urllib.request as urllib
 
 
 # In[2]:
@@ -42,7 +37,7 @@ def on_disconnect():
     print("Closed")
 
 
-# In[3]:
+# In[18]:
 
 def run_update():
     ws = websocket.WebSocketApp('wss://api.bitfinex.com/ws/2')
@@ -54,7 +49,7 @@ def run_update():
     ws.run_forever()
 
 
-# In[4]:
+# In[19]:
 
 run_update()
 
